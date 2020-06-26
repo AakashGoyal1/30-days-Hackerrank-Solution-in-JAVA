@@ -1,0 +1,13 @@
+
+
+    public static Node removeDuplicates(Node head) {
+       //Write your code here
+        Node n = head;
+        while(n.next != null)
+            if(n.data == n.next.data)
+                n.next = n.next.next;
+            else
+                n = n.next;
+        return head;
+    }
+
